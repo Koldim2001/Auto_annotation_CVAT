@@ -112,8 +112,11 @@ def main(**kwargs):
     image_folder = kwargs["img_folder"]
     output_folder = 'results/obj_train_data'
    
+    # Загрузка с диска модели при выборе режима по умолчанию
+    if weights_path == "models/bag_belt_yolo.pt":
+        download_models()
+
     # Загрузка модели YOLOv5
-    download_models()
     model = torch.hub.load('ultralytics/yolov5', 'custom', path=weights_path)
     # Установка порога по уверенности и подавления
     model.conf = conf  # Порог по уверенности
