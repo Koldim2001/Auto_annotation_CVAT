@@ -1,4 +1,7 @@
 /test
+/image_folder
 **/__pycache__/ 
 .ipynb_checkpoints
 /models
+annotations.zip
+/results
