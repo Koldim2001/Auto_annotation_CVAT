@@ -1,0 +1,4 @@
+classes = 7
+train = data/train.txt
+names = data/obj.names
+backup = backup/
