@@ -93,14 +93,14 @@ def create_zip_archive(folder_path, output_path):
 )
 @click.option(
     "--conf",
-    help="Порог уверенности классификатора",
-    default=0.15,
+    help="Порог уверенности классификатора (меньше боксов будет при увеличении значения)",
+    default=0.20,
     type=float,
 )
 @click.option(
     "--iou",
-    help="Порог iou на non max suppression",
-    default=0.4,
+    help="Порог iou на non max suppression (больше боксов будет при увеличении значения)",
+    default=0.20,
     type=float,
 )
 def main(**kwargs):
