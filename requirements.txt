@@ -2,4 +2,5 @@ torch
 ultralytics
 gdown
 click
+opencv-python
 

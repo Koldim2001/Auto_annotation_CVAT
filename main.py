@@ -141,8 +141,6 @@ def main(**kwargs):
         # Сохранение аннотаций в формате YOLO 1.1
         save_annotations_to_yolo_format(annotation_file, results, height_max, width_max)
 
-    print(f"Аннотации сохранены")
-
     train_file = 'results/train.txt'  # Имя файла train.txt
     # Создание пустого файла train.txt, если он не существует
     if not os.path.exists(train_file):
@@ -163,13 +161,15 @@ def main(**kwargs):
     copy_files_to_folder(source_folder, destination_folder)
 
     # Теперь архивируем итоговую аннотационную папку
-    # Указать путь к папке для сохранения zip-архива
+    # Путь к папке для сохранения zip-архива
     zip_path = 'annotations.zip'
 
     create_zip_archive(destination_folder, zip_path)
 
     # Удаление папки вспомогательной (results) со всем содержимым
     delete_folder(destination_folder)
+
+    print(f"Аннотации сохранены в файл {zip_path}")
 
 
 if __name__ == "__main__":
