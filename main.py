@@ -20,9 +20,9 @@ def download_models(folder_name='models'):
             os.mkdir(folder_name)
 
         print('Загружаю модель нейронной сети:')
-        url = "https://drive.google.com/uc?id=1p2ErNFGtcN9Gly3ewy1UAz68wAKxSFW3"
-
-        gdown.download(url, output, quiet=False)
+        url = "https://drive.google.com/uc?id=***"
+        print('Загрузка готовой сети невозможна, так как это open source код')
+        #gdown.download(url, output, quiet=False)
 
 
 def save_annotations_to_yolo_format(output_file, results, height_max, width_max):
